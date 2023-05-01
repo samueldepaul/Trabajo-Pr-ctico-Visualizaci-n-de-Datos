@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Visualización AG1</title>
+    <title>Trabajo Práctico</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -37,40 +37,62 @@
     <span class="negrita">Nombre:</span> Samuel de Paúl Smith
     <br />
     <span class="negrita">URL:</span>
-    <a href="https://js-nppalz.stackblitz.io" target="_blank">
-      https://js-du4c38.stackblitz.io
+    <a href="https://js-goamt8.stackblitz.io" target="_blank">
+      https://js-goamt8.stackblitz.io
     </a>
     <br />
     <span class="negrita">GitHub:</span>
     <a
-      href="https://github.com/samueldepaul/08MBID---Visualizacion-de-Datos"
+      href="https://github.com/samueldepaul/Trabajo-Pr-ctico-Visualizaci-n-de-Datos"
       target="_blank"
-      >https://github.com/samueldepaul/08MBID---Visualizacion-de-Datos
+      >https://github.com/samueldepaul/Trabajo-Pr-ctico-Visualizaci-n-de-Datos
     </a>
-    <h1>Visualización AG1</h1>
-    <h2>Google Sheets</h2>
-    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyH-P4yKNZVZIDCAFc1N1IerSkSLEej60YzPLJxtjOI5dTH26u8XwELe8VI5LBsREiISF2oej8rFrG/pubchart?oid=233178870&amp;format=interactive"></iframe>
-    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyH-P4yKNZVZIDCAFc1N1IerSkSLEej60YzPLJxtjOI5dTH26u8XwELe8VI5LBsREiISF2oej8rFrG/pubchart?oid=604803668&amp;format=interactive"></iframe>
+    <br />
+    <span class="negrita">Kaggle (Dataset):</span>
+    <a
+      href="https://www.kaggle.com/datasets/justinnguyen0x0x/best-books-of-the-21st-century-dataset"
+      target="_blank"
+      >https://www.kaggle.com/datasets/justinnguyen0x0x/best-books-of-the-21st-century-dataset
+    </a>
     
-    <iframe width="600" height="442" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyH-P4yKNZVZIDCAFc1N1IerSkSLEej60YzPLJxtjOI5dTH26u8XwELe8VI5LBsREiISF2oej8rFrG/pubchart?oid=1861730103&amp;format=interactive"></iframe>
+    <h1>Trabajo Práctico Visualización de Datos</h1>
+    <p>Para realizar el trabajo práctico de la asignatura de Visualización de Datos, utilizaremos el mismo dataset que se ha utilizado tanto en Minería de Datos como posteriormente en Estadística Avanzada.<br><br>
+    La base de datos ha sido extraída de la plataforma Kaggle
+    y tiene como título "Best Books of The 21st Century Dataset". Este dataset recoge, en función de los votos de los usuarios de la plataforma GoodReads, unos 10.000 libros que son considerados los mejores libros del siglo XXI. Como parte del preprocesado que se llevó a cabo en la asignatura de Minería de Datos, se añadieron a las variables que ya figuran en este dataset otras variables adicionales generadas manualmente además de una limpieza de observaciones repetidas o incompletas y un filtrado de valores anómalos y faltantes.<br><br>
+    Hay muchos motivos por los que a una persona podría interesarle realizar un análisis de datos relativos a libros. Ya sea desde la perspectiva de un escritor o editor, para analizar las preferencias de lectura de los usuarios, conocer a su público en particular o identificar patrones en los libros de éxito; o desde la perspectiva de un lector, para encontrar recomendaciones personalizadas o autores y géneros en auge. Este trabajo se centra principalmente en tratar de descubrir cuáles son los factores que contribuyen a que un libro sea bien valorado por los lectores y en hallar una manera de predecir, con el menor error posible, cómo un libro será acogido por el público en función de algunas de sus características.<br><br>
+    Dicho esto, nuestra audiencia serán tanto autores que quieren investigar el mercado y averiguar información de valor para escribir su próximo libro, pero también pueden ser lectores interesados por conocer los gustos del público general y obtener sugerencias del próximo libro que deberían leer.<br><br>
+    A continuación encontraremos una serie de gráficos, en los cuales se indicará el tipo de gráfico y el software con el que han sido generados. Además se describirá la información que representan y se argumentará le elección de dicho gráfico.
+</p>
+    <h2>Distribución de la valoración de los libros de GoodReads</h2>
+    <h4>(Histograma: Google Colab + Seaborn)</h4>
+    Empezamos por estudiar la distribución de la variable más importante del dataset: la valoración de los libros. Para realizar el gráfico hemos tomado el dataset producto de los trabajos de las asignaturas de Minería de Datos y Estadística Avanzada, y utilizando Google Colab y la librería Seaborn, construída sobre Matplotlib, hemos escrito unas pocas líneas de código para generar la visualización.
+    <img src="https://raw.githubusercontent.com/samueldepaul/Trabajo-Pr-ctico-Visualizaci-n-de-Datos/main/distribuci%C3%B3n%20valoraci%C3%B3n%20media%20libros.png">
+    <br> Podemos observar que la distribución de la valoración de los libros se asemeja a una normal, donde el valor medio está en torno a 4 y las colas son bastante simétricas aunque la de la izquierda se alarga un poco más. Esto nos da una referencia de cuál es la valoración media de un "buen libro". Para hacer un libro fuera de serie, este debería obtener una puntuación mayor que 4, más cerca de 4.5. <br><br>
+    Este es un gráfico simple y muy visual, que no requiere de muchas etiquetas ni añadidos para que el lector lo entienda, por eso es una buena opción para empezar con el análisis.<br><br>
+    Para realizar este gráfico hemos utilizado Google Colab y Seaborn porque, a parte de obtener un resultado estético, su elaboración requería de algunas líneas de código que habría sido más complejo implementar en otros softwares como Google Sheets o DataWrapper. Para realizar el histograma de esta variable contínua, se deben tomar los intervalos de agrupación de los valores, añadiendo una nueva variable al dataset a partir de la cual se genera el gráfico. Este es un proceso muy simple en Colab pero puede ser más complejo en otras plataformas.
+    <h2>Porcentaje de libros por género</h2>
+    <h4>(Gráfico de Sectores (Piechart): Google Sheets)</h4>
+    Para realizar el siguiente gráfico hemos tomado los 50 libros mejor valorados por los usuarios de la plataforma GoodReads. Posteriormente hemos creado una tabla dinámica en Google Sheets que nos permite agrupar las observaciones por su género, para finalmente configurar el gráfico de sectores.
+    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTSBHdwaZnZlzc-TLDGQhhFHGPXX_mwmCp5bP0Ovk8GAjEZ6XU0-GYaQS_A8fWyj5p-uneg-YnwbRb4/pubchart?oid=118451829&amp;format=interactive"></iframe>
+    <br>Se observa que de los 50 mejores libros, más de la mitad (54%), son de Fantasía y que el resto son bastante minoritarios. Esto nos indica que los libros "que más gustan" suelen ser del género Fantasía. <br><br>
+    Para representarlo hemos utilizado un gráfico de sectores porque es útil a la hora de representar proporciones, y no existe confusión entre proporciones similares. Se aprecia muy bien la gran mayoría por parte de los libros de fantasía y al añadir las etiquetas en el exterior del gráfico, y no en el interior, conseguimos un gráfico que se entiende fácil y claramente y que no resulta muy cargado.
 
-    <h2>Gráfico Extra Google Sheets</h2>
-    <iframe width="600" height="442" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyH-P4yKNZVZIDCAFc1N1IerSkSLEej60YzPLJxtjOI5dTH26u8XwELe8VI5LBsREiISF2oej8rFrG/pubchart?oid=1870015875&amp;format=interactive"></iframe>
-    <h2>¿Cuál de los 4 grñaficos anteriores es más adecuado?</h2>
-    <p>En mi opinión, el gráfico más adecuado para representar estos datos es el cuarto. Para empezar, el gráfico de sectores me parece que no tiene sentido ya que representa "la proporción del total de las emisiones" pero ni tan solo se consideran todos los países. Para utilizar un gráfico como este deberíamos considerarlos todos individualmente o generar un sector "Otros" que englobe las emisiones de todos los países minoritarios. <br><br>
+    <h2>Número medio de reseñas por género</h2>
+    <h4>(Gráfico de barras horizontales: Google Sheets)</h4>
+    Para realizar el siguiente gráfico de nuevo hemos tomado los 50 libros mejor valorados y creado una tabla dinámica agrupando las observaciones por su género. En este caso lo que queremos estudiar es qué géneros reciben el mayor número de reseñas, ya que esto es un indicador de la popularidad de los libros.
 
-      Los tres siguientes son muy similares ya que todos son gráficos de barras. Me decanto por el cuarto por varias razones:<br><br>
-      1. Tiene los valores ordenados decrecientemente, lo que facilita la visualización y entendimiento.<br>
-      2. Las barras son horizontales. Esto beneficie la visualización en casos como este en el que ya tenemos un número considerable de barras (10).<br>
-      3. Destacamos mediante colores la información que es más relevante para nosotros. En este caso, las emisiones de nuestro país, España. De esta manera evitamos confusión y facilitamos la comprensión del gráfico.
+    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTSBHdwaZnZlzc-TLDGQhhFHGPXX_mwmCp5bP0Ovk8GAjEZ6XU0-GYaQS_A8fWyj5p-uneg-YnwbRb4/pubchart?oid=1136057787&amp;format=interactive"></iframe>
+    
+    <br>Observamos de nuevo que los valores son muy dispares. Hay 4 géneros que reciben un número considerable de reseñas mientras que el resto reciben muy pocas, de media. Los géneros que reciben más son: Históricos, Fantasía, Ficción y No-Ficción, estando únicamente los tres primeros por encima de la media total. <br><br>
+    Escogemos un gráfico de barras horizontales porque a través de ellos se aprecia de forma clara la diferencia de magnitud entre los géneros, con ayuda también de la etiqueta con el valor que hemos insertado en la parte derecha de cada barra. Además, hemos resaltado de color rojo la media total para que el lector tenga un punto de comparación claro.<br><br>
+    Para elaborar las 2 anteriores representaciones se ha utilizado Google Sheets. Se ha seleccionado esta herramienta porque es fácil de usar y ofrece una amplia variedad de funciones para analizar datos. Además, permite importar y exportar datos de manera sencilla, generar datos con cierta interactividad por parte del usuario y al estar en línea, las modificaciones que se realicen en el gráfico se realizan también en la plataforma web automáticamente.
     </p>
-    <h2>Gráfico Extra Datos Cotización y Volumen</h2>
-    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSw9ryA30-rM9hPgUk05T3NO8BcNaXGb2AY0hhGTKKVbfQjVSAhVnXxaAd_zGukb7xBiELyuM1jEWrg/pubchart?oid=918802256&amp;format=interactive"></iframe>
-    <h2>Data Wrapper</h2>
-    <iframe title="Emisiones CO2" aria-label="Scatter Plot" id="datawrapper-chart-4KjDj" src="https://datawrapper.dwcdn.net/4KjDj/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="502" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-    </script>
-    <h2>Gráfico Extra Data Wrapper</h2>
-    <iframe title="Top 10 Emisiones CO2 en 2021" aria-label="Bar Chart" id="datawrapper-chart-aOlJS" src="https://datawrapper.dwcdn.net/aOlJS/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="396" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+    <h2>Libros en función de reseñas y premios</h2>
+    <h4>(Gráfico de dispersión: DataWrapper)</h4>
+    A continuación veremos un gráfico de dispersión con 10 de los mejores libros en términos del número de reseñas y la cantidad de premios recibidos. Para realizarlo hemos tomado un fragmento de los datos y lo hemos introducido en DataWrapper, donde de manera sencilla hemos obtenido el gráfico siguiente:
+    <iframe title="Mejores libros en términos de reseñas y premios" aria-label="Scatter Plot" id="datawrapper-chart-azuS4" src="https://datawrapper.dwcdn.net/azuS4/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="398" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+    Gracias al gráfico podemos observar que hay 2 libros que destacan por encima de los demás en términos de número de reseñas y cantidad de premios. Estos libros son: "Assassin's Fate (The Fitz and the Fool, #3)" y "Words of Radiance (The Stormlight Archive, #2)". Si un autor quiseiera escribir un libro de éxito quizás debería investigar qué es lo que ha hecho que estos dos libros hayan tenido tan buena acogida, y para el lector, ya tiene 2 sugerencias que seguro que no le defraudarán. <br><br>
+    La elección de utilizar DataWrapper ha sido esencialmente por los siguientes factores: DataWrapper es una herramienta potente pero simple, que me ha permitido crear este gráfico tan estético de manera muy sencilla. Además, es adaptativo, se adapta a las dimensiones del dispositivo con el que se esté visualizando. DataWrapper no tiene muchas opciones para modificar los datos ni introducir código, pero como hemos indicado anteriormente, estos datos estaban limpios por el preprocesado llevado a cabo en la asignatura de Minería de Datos. Por tanto, DataWrapper era la opción perfecta.
     </script>
   </div>
 </body>
